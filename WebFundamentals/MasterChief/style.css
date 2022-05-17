@@ -1,3 +1,9 @@
+/* This selector grabs EVERYTHING */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 h1{
     color: green;
     text-align: center;
@@ -5,7 +11,8 @@ h1{
 }
 
 p{
-    background-color: brown;
+    background-color: rgb(77, 165, 42);
+    padding: 10px;
 }
 
 /* use a . for a class */
@@ -18,4 +25,22 @@ p{
 #myTable {
     background-color: orange;
 }
-/* Testing Github */
+
+ul{
+    padding: 30px;
+}
+
+td{
+    padding: 10px;
+}
+
+.about{
+    width: 1000px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+img{
+    margin-left: 20px;
+}
