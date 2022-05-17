@@ -1,0 +1,20 @@
+h1{
+    color: green;
+    text-align: center;
+    font-size: 50px;
+}
+
+p{
+    background-color: brown;
+}
+
+/* use a . for a class */
+.nobackground {
+    background-color: transparent;
+}
+
+/* use a # for an id */
+/* id is stronger than class which is stronger than tags */
+#myTable {
+    background-color: orange;
+}
