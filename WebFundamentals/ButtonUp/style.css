@@ -1,0 +1,28 @@
+*{
+    margin: 3px;
+}
+
+.search{
+    color: blue;
+    background-color: gainsboro;
+    width: 150px;
+    border-color: blue;
+    border-radius: 12px;
+}
+
+.plus{
+    background-color: teal;
+    border-radius: 50%;
+    border-width: 0px;
+    color: white;
+    font-size: 20px;
+}
+
+.createAccount{
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 5px black;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
