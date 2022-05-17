@@ -1,0 +1,13 @@
+.red {
+    height: 300px;
+    background-color: red;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 25%;
+}
