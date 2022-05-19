@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #484848;
+}
+
+.navbar {
+    height: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLeft {
+    width: 600px;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.logobox {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLeft img {
+    width: 90%;
+}
+
+.navRight {
+    width: 450px;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.directory {
+    height: 50px;
+    background-color: beige;
+}
+
+.banner {
+    height: 500px;
+    background-image: linear-gradient(#03aad8, white);
+    display: flex;
+    justify-content: center;
+}
+
+.banner img {
+    margin-top: 30px;
+    border-radius: 3px;
+}
+
+.subbanner {
+    width: 51%;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subleft {
+    width: 600px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subleft h2 {
+    font-size: 28px;
+}
+
+.subleft button {
+    background-color: #e4000f;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.rating {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating img {
+    height: 80px;
+}
+
+.featured {
+    width: 95%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: brown;
+}
