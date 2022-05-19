@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+border: 2px solid gray;
+margin: 20px;
+}
+
+.topBar {
+    width: 1000px;
+    height: 130px;
+    background-color: #17a2b8;
+}
+
+.profilePic {
+    position: relative;
+    left: 50px;
+    top: 65px;
+}
+
+.profilePic img {
+    border-radius: 50%;
+    width: 120px;
+    border: 4px solid white;
+    padding: 5px;
+    background-color: black;
+}
+
+.info {
+    margin-left: 50px;
+}
+
+.name {
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+.location img {
+    height: 40px;
+    padding-right: 20px;
+}
+
+.location {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#one {
+    padding: 10px 0px;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.settings img {
+    height: 35px;
+    padding-right: 10px;
+}
