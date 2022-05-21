@@ -114,8 +114,6 @@ margin: 20px;
     margin-left: 50px;
 }
 
-/*  */
-
 .name {
     font-size: 50px;
     margin-top: 70px;
@@ -154,14 +152,43 @@ margin: 20px;
     text-decoration: underline;
 }
 
-/* ============================================== */
+/* ======= Education ======================================= */
 
 .education {
     height: 300px;
     width: 100%;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
+    border: 3px solid gray;
     margin-top: 100px;
 }
+
+.eduBanner {
+    height: 70px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+}
+
+#main {
+    font-weight: bold;
+    color: white;
+}
+
+.education h1 {
+    margin: 10px 30px;
+}
+
+.education h2 {
+    color: gray;
+    margin: 10px 30px;
+}
+
+.education h3 {
+    margin: 10px 30px;
+}
+
+/* ============================================================ */
 
 .rightBar {
     height: 1000px;
