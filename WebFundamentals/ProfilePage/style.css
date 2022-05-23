@@ -19,7 +19,6 @@
 
 .nav-title {
     color: white;
-    margin-left: 20px;
 }
 
 .nav-links {
@@ -31,7 +30,7 @@
 
 }
 
-a {
+.nav-links a {
     text-decoration: none;
     color: white;
 }
@@ -197,15 +196,105 @@ margin: 20px;
     padding: 20px;
 }
 
+/* ================== Connection Requests ============================ */
+
 .connectionRequests {
     height: 300px;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
+    border: 3px solid gray;
 }
 
+.requestsTop {
+    background-color: #333333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.requestsTop #number {
+    border-radius: 50%;
+    padding: 6.5px 16px;
+}
+
+#accept {
+    margin-left: 100px;
+}
+
+#accept2 {
+    margin-left: 112px;
+}
+
+/* =========================================== Connections ======================= */
+
 .yourConnections {
-    height: 400px;
+    height: 600px;
     width: 100%;
-    background-color: gray;
+    /* background-color: gray; */
     margin-top: 150px;
+    border: 3px solid gray;
+}
+
+.connectionTop {
+    background-color: #333333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+#number {
+    background-color: #cccccc;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+#title {
+    color: white;
+    font-style: bold;
+    font-size: 30px;
+}
+
+.connectionBottom {
+    /* background-color: blue; */
+    height: 300px;
+    padding: 0px 10px;
+}
+
+.profileConnection {
+    /* background-color: green; */
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profileConnection img {
+    margin-left: 20px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.profileConnection h3 {
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.connectionLink {
+    height: 80px;
+    border-top: 3px solid gray;
+    /* background-color: yellow; */
+    margin-top: 125px;
+    display: flex;
+    align-items: center;
+}
+
+.connectionLink a {
+    color: blue;
+    padding: 20px;
+    font-size: 30px;
 }
