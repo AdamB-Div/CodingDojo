@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* NavBar ==================================== */
+
+.topBar {
+    width: 49.40%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    color: black;
+    font-size: 40px;
+}
+
+.topBar input {
+    border: 3px solid black;
+    height: 20px;
+    width: 300px;
+}
+
+.topBar button {
+    background-color: blue;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    box-shadow: 2px 2px black;
+    border-radius: 5px;
+}
+
+/* Main Bottom ============================== */
+
+.bottomContainer {
+    height: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* Left Bar ======================================= */
+
+.leftBar {
+    width: 60%;
+    height: 500px;
+    margin: 10px;
+}
+
+/* Top Left Box =============================== */
+
+.topLeft, .bottomLeft {
+    height: 250px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.define {
+    width: 30%;
+    height: 230px;
+    background-color: orange;
+    margin: 10px;
+}
+
+.definition {
+    width: 70%;
+    height: 230px;
+    background-color: red;
+    margin: 10px;
+}
+
+/* Bottom Left Box ================================= */
+
+.bottomLeft {
+    margin-top: 10px;
+}
+
+/* Right Bar ================================ */
+
+.rightBar {
+    width: 40%;
+    height: 200px;
+    border: 3px solid black;
+    margin: 10px;
+}
