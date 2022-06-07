@@ -13,7 +13,7 @@ class Student:
         print("Last Name - ", self.last_name)
         print("Instructor - ", self.instructor)
         print("Current Stack - ", self.current_stack)
-    
+
     def full_name(self):
         return self.first_name + " " + self.last_name
 
