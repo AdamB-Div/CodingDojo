@@ -1,5 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Sorry! No response. Try Again."
 
 @app.route("/")
 def hello_world():
@@ -9,11 +13,11 @@ def hello_world():
 def dojo():
     return "Dojo!"
 
-@app.route("/say/<num>")
+@app.route("/say/<string:num>")
 def print_string(num):
     return f"Hi {num}"
 
-@app.route("/repeat/<val>/<word>")
+@app.route("/repeat/<int:val>/<string:word>")
 def print_word(val, word):
     print(val)
     print(word)
