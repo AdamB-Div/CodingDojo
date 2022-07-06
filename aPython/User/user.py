@@ -41,4 +41,4 @@ adam.enroll()
 adam.spend_points(300)
 adam.display_info()
 
-# They all work I just don't like all of the commented out test cases
+# They all work I just don't like all of the commented out test
