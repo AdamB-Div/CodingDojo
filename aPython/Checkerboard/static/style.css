@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    text-align: center;
+    margin:50px 0px;
+}
+
+.main{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+tr{
+    margin: 0px;
+}
+
+td{
+    margin: 0px;
+}
