@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-5 bg-dark text-light p-5 rounded">
+        <p class=" h1 text-center mb-5 text-primary "><u>Dojo Survey</u></p>
+        <form action="/get_results" class="row g-3" method="post">
+            <!-- Item 1 -->
+            <div class="col-12">
+                <label for="" class="form-label lead">Your Name:</label>
+                <div class="col-2"></div>
+                <div class="col-12">
+                    <input type="text" class="form-control" name="name">
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="col-12">
+                <label for="" class="form-label lead">Dojo Location:</label>
+                <div class="col-4"></div>
+                <select class="form-select" name="location">
+                    <option selected>Choose Location</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Detroit">Detroit</option>
+                    <option value="New York">New York</option>
+                </select>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-12">
+                <label for="" class="form-label lead">Favorite Language:</label>
+                <div class="col-4"></div>
+                <select class="form-select" name="language">
+                    <option selected>Choose Language</option>
+                    <option value="Python">Python</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                </select>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="col-12">
+                <label class="form-label lead">Select all that apply:</label><br>
+                <input class="form-check-input" type="checkbox" name="checkbox" value="box1">
+                <label class="form-check-label">I have a decent amount of experience and would like to improve my skills.</label><br>
+                <input class="form-check-input" type="checkbox" name="checkbox" value="box2">
+                <label class="form-check-label">I have a basic understanding of programming and would like to increase my knowledge.</label><br>
+                <input class="form-check-input" type="checkbox" name="checkbox" value="box3">
+                <label class="form-check-label">I have no experience programming but I am eager to learn!</label><br>
+                <input class="form-check-input" type="checkbox" name="checkbox" value="box4">
+                <label class="form-check-label">I hate programming and I have no idea why I'm filling this form out.</label>
+            </div>
+
+            <!-- Radio -->
+            <div class="col-12">
+                <label for="" class="form-label lead">Would you recommend this course to a friend or family member?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio_btn" value="Yes">
+                    <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio_btn" value="No">
+                    <label class="form-check-label">No</label>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <label for="comment" class="lead">Comments:</label>
+                <textarea class="form-control mt-3" rows="5" name="comments"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4 col-3" value="submit_survey">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
