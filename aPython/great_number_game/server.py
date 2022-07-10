@@ -17,7 +17,12 @@ def index():
 def wrong_guess():
     guess = session['guess']
     random_int = session['random_int']
-    return render_template("wrong_guess.html", guess = guess, random_int = random_int)
+    if 'count' in session:
+        session['count'] += 1
+    else:
+        session['count'] = 1
+    count = session['count']
+    return render_template("wrong_guess.html", guess = guess, random_int = random_int, count = count)
 
 @app.route("/right")
 def right_guess():
