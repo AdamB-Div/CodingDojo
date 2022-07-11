@@ -28,7 +28,7 @@
         <h5 class="text-center mt-3">Guess Again!</h5>
         <div class="text-center">
             <form action="/guess" method="POST">
-                <input type="number" name="guess"><br>
+                <input type="number" name="guess" autofocus="autofocus" onfocus="this.select()"><br>
                 <input class="mt-2" type="submit" value="Guess">
             </form>
         </div>
