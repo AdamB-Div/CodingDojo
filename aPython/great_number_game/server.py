@@ -26,7 +26,8 @@ def wrong_guess():
 
 @app.route("/right")
 def right_guess():
-    return render_template("right_guess.html")
+    count = session['count']
+    return render_template("right_guess.html", count=count)
 
 @app.route("/guess", methods = ["POST"])
 def guess():
