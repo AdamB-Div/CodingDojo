@@ -1,0 +1,32 @@
+INSERT INTO dojos (name) 
+VALUES('Kai Zen Dojo'),
+('Muy Tai Dojo'),
+('Ninja Ninja Dojo');
+
+DELETE FROM dojos WHERE id >= 1;
+
+INSERT INTO dojos (name) 
+VALUES('Cobra Kia Dojo'),
+('Soy Sauce Dojo'),
+('Sushi Fish Dojo');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES('Billy', 'Bob', 45, 4),
+('Sgt', 'Pepper', 150, 4),
+('Clip', 'Clop', 5, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES('Anita', 'Popsicle', 28, 5),
+('Forrest', 'Grump', 35, 5),
+('Stacys', 'Mom', 5, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES('Michael', 'Scott', 85, 6),
+('Steve', 'Jobs', 18, 6),
+('Dwayne', 'Hart', 23, 6);
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+SELECT dojo_id FROM ninjas WHERE id = 9;
