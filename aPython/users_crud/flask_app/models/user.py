@@ -41,15 +41,23 @@ class User:
 
         return connectToMySQL('users_schema').query_db(query, data)
 
+
     # Show User
     @classmethod
     def show_user(cls, data):
-        query = "SELECT * FROM users WHERE id = %(user_id)s"
+        query = "SELECT * FROM users WHERE id = %(id)s"
 
-        results = connectToMySQL('users_schema').query_db(query, data)
+        result = connectToMySQL('users_schema').query_db(query, data)
 
-        user = []
+        return result[0]
 
-        for user in results:
-            user.append( cls(user) )
-        return results
+
+    # Edit User
+    @classmethod
+    def edit_user(cls, data):
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s WHERE id = %(id)s;"
+
+        return connectToMySQL('users_schema').query_db(query, data)
+
+
+

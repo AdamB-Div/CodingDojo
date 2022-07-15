@@ -15,7 +15,25 @@
         <!-- Show A Single User -->
         <p class="h1 mb-3">User</p>
 
-        
+        <!-- Table body start -->
+        <table class="table table-striped table-bordered border border-4 mt-4">
+            <tbody>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <td scope="col">{{user['first_name']}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Last Name</th>
+                    <td scope="col">{{user['last_name']}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Email</th>
+                    <td scope="col">{{user['email']}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/" class="btn btn-danger mt-4 col-2">Go Back</a>
 
     </div>
 

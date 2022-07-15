@@ -31,16 +31,16 @@
                             <td>{{user.last_name}}</td>
                             <td>{{user.email}}</td>
                             <td>
-                                <a href="/show/{{user.id}}">Show | </a>
-                                <a href="">Edit | </a>
-                                <a href="/delete_user/{{user.id}}">Delete</a>
+                                <a href="/user/{{user.id}}/show">Show | </a>
+                                <a href="/user/{{user.id}}/edit">Edit | </a>
+                                <a href="/user/{{user.id}}/delete">Delete</a>
                             </td>
                         </tr>
                     {% endfor %}
             </tbody>
         </table>
 
-        <a href="/create" class="btn btn-primary"> Create a New User</a>
+        <a href="/create" class="btn btn-primary col-2"> Create a New User</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
