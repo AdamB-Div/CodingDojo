@@ -26,14 +26,14 @@
             </thead>
             <tbody>
                     {% for user in all_users %}
-                        <tr>
+                        <tr class="align-middle">
                             <td>{{user.first_name}}</td>
                             <td>{{user.last_name}}</td>
                             <td>{{user.email}}</td>
                             <td>
-                                <a href="/user/{{user.id}}/show">Show | </a>
-                                <a href="/user/{{user.id}}/edit">Edit | </a>
-                                <a href="/user/{{user.id}}/delete">Delete</a>
+                                <a href="/user/{{user.id}}/show" class="btn btn-info btn-sm">Show</a>
+                                <a href="/user/{{user.id}}/edit" class="btn btn-success btn-sm">Edit</a>
+                                <a href="/user/{{user.id}}/delete" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                     {% endfor %}

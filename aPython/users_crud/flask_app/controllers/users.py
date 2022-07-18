@@ -79,7 +79,7 @@ def update_user(user_id):
 
     User.edit_user(data)
 
-    return redirect("/")
+    return redirect(f"/user/{user_id}/show")
 
 if __name__ == "__main__":
     app.run(debug=True)
