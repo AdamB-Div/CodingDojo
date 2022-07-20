@@ -44,14 +44,19 @@ class Dojo:
         dojo = cls(results[0])
 
         for row in results:
+            # Prints in console if you need example
+            # dictionaries will have keys of id...name... but when they repeat, it'll be ninjas.id, ninjas.created_at.
             print(row)
+            # Add those to a new dictionary to pass objects
             ninja_data = {
                 **row,
                 "id" : row["ninjas.id"],
                 "created_at" : row["ninjas.created_at"],
                 "updated_at" : row["ninjas.updated_at"]
             }
+            # Create the ninja as a class object
             ninja = Ninja(ninja_data)
+            # add that ninja to the list of ninjas we have in every dojo (line 11)
             dojo.ninjas.append(ninja)
 
         return dojo
