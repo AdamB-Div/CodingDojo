@@ -12,17 +12,20 @@
 
         <!-- New Ninja -->
         <div class="container">
-            <h1 class="row">New Ninja</h1>
+            <div class="row d-flex">
+                <h1 class="col-10">New Ninja</h1>
+                <a href="/" class="btn btn-danger text-center col-2">Return Home</a>
+            </div>
             
             <div class="row">
-                <form action="" class="">
+                <form action="/create_new_ninja" method="POST">
                     <div class="d-flex mt-3 align-items-center">
                         <label for="dojo" class="col-1">Dojo</label>
                         <select class="form-select" name="dojo" style="width:auto">
                             <option selected>Select One:</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            {% for dojo in all_dojos%}
+                            <option value="{{dojo.id}}">{{dojo.name}}</option>
+                            {% endfor %}
                         </select>
                     </div>
         
@@ -41,7 +44,7 @@
                         <input type="text" name="age">
                     </div>
 
-                    <button type="submit" class="btn btn-success mt-3">Create Ninja</button>
+                    <input type="submit" class="btn btn-success mt-3" value="Create Ninja"/>
                 </form>
             </div>
         </div>

@@ -17,9 +17,8 @@
             <form action="/create_dojo" method="POST">
                 <input type="text" class="form-control mb-3" placeholder="Dojo Name" name="dojo_name">
 
-                <button type="submit" class="btn btn-success">Create Dojo</button>
+                <input type="submit" class="btn btn-success" value="Create Dojo"/>
             </form>
-
         </div>
 
         <!-- List of Dojos -->
@@ -28,11 +27,11 @@
 
             <ul class="list-group">
                 {% for dojo in all_dojos %}
-                <li class="list-group-item">{{dojo.name}}</li>
+                <li class="list-group-item"><a href="/dojo_ninjas/{{dojo.id}}">{{dojo.name}}</a></li>
                 {% endfor %}
             </ul>
 
-            <a href="" class="btn btn-success mt-3">Add Ninja</a>
+            <a href="/create_ninja" class="btn btn-success mt-3">Add Ninja</a>
         </div>
     </div>
 
