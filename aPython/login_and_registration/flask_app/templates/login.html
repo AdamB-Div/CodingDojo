@@ -8,54 +8,54 @@
     <title>Login/Register</title>
 </head>
 <body>
-    <div class="container d-flex">
+    <div class="container p-3 d-flex">
         <!-- Registration -->
-        <div class="container">
-            <h1>Registration</h1>
+        <div class="container bg-dark text-light rounded">
+            <h1><u>Registration</u></h1>
             <form action="/user/register" method="POST">
-                <label>First Name:</label>
-                <input type="text" name="first_name">
+                <label class="col-4 lead">First Name:</label>
+                <input type="text" name="first_name" class="mb-2">
                 {% for message in get_flashed_messages(category_filter = ['error_registration_first_name'])%}
                 {{message}}
                 {% endfor %}
                 <br>
-                <label>Last Name:</label>
-                <input type="text" name="last_name">
+                <label class="col-4 lead">Last Name:</label>
+                <input type="text" name="last_name" class="mb-2">
                 {% for message in get_flashed_messages(category_filter = ['error_registration_last_name'])%}
                 {{message}}
                 {% endfor %}
                 <br>
-                <label>Email:</label>
-                <input type="email" name="email">
+                <label class="col-4 lead">Email:</label>
+                <input type="email" name="email" class="mb-2">
                 {% for message in get_flashed_messages(category_filter = ['error_registration_email'])%}
                 {{message}}
                 {% endfor %}
                 <br>
-                <label>Password:</label>
-                <input type="password" name="password">
+                <label class="col-4 lead">Password:</label>
+                <input type="password" name="password" class="mb-2">
                 {% for message in get_flashed_messages(category_filter = ['error_registration_password'])%}
                 {{message}}
                 {% endfor %}
                 <br>
-                <label>Confirm Password:</label>
-                <input type="password" name="password_confirm">
-                <input type="submit">
+                <label class="col-4 lead">Confirm Password:</label>
+                <input type="password" name="password_confirm" class="mb-2"><br>
+                <input type="submit" class="btn btn-primary mb-3">
             </form>
         </div>
 
         <!-- Login -->
-        <div class="container">
-            <h1>Login</h1>
+        <div class="container bg-light">
+            <h1><u>Login</u></h1>
             <form action="/user/login" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email">
+                <label class="col-4 lead">Email:</label>
+                <input type="email" name="email" class="mb-2">
                 {% for message in get_flashed_messages(category_filter = ['error_login_credentials'])%}
                 {{message}}
                 {% endfor %}
                 <br>
-                <label>Password:</label>
-                <input type="password" name="password">
-                <input type="submit">
+                <label class="col-4 lead">Password:</label>
+                <input type="password" name="password" class="mb-2"><br>
+                <input type="submit" class="btn btn-success">
             </form>
         </div>
     </div>
