@@ -214,13 +214,64 @@ int[] numArr = {2, 10, 3, 85, -2, -4};
 
 
 // 12
-static void ShiftValues(int[] numbers)
-{
-    // Given an integer array, say [1, 5, 10, 7, -2], 
-    // Write a function that shifts each number by one to the front and adds '0' to the end. 
-    // For example, when the program is done, if the array [1, 5, 10, 7, -2] is passed to the function, 
-    // it should become [5, 10, 7, -2, 0].
-    List<int> temp = numbers.ToList();
-    temp.RemoveAt(0);
+// static void ShiftValues(int[] numbers)
+// {
+//     // Given an integer array, say [1, 5, 10, 7, -2], 
+//     // Write a function that shifts each number by one to the front and adds '0' to the end. 
+//     // For example, when the program is done, if the array [1, 5, 10, 7, -2] is passed to the function, 
+//     // it should become [5, 10, 7, -2, 0].
+//     List<int> temp = numbers.ToList();
+//     temp.RemoveAt(0);
+//     temp.Add(0);
+
+//     numbers = temp.ToArray();
+    
+//     foreach (int num in numbers)
+//     {
+//         Console.WriteLine(num);
+//     }
+// }
+
+// ShiftValues(numArr);
+
+
+// 13
+// static object[] NumToString(int[] numbers)
+// {
+//     object[] objArray = numbers.Cast<object>().ToArray();
+
+//     string dojo = "Dojo";
+//     foreach (object obj in objArray)
+//     {
+//         if ((int)obj < 0) {
+//             objArray[(int)obj] = (string)dojo;
+//         }
+//     }
+
+//     foreach (object obj in objArray)
+//     {
+//         Console.WriteLine(obj);
+//     }
+
+//     return objArray;
+// }
+static object[] NumToString(int[] numbers){
+    object[] newArr = new object[numbers.Length];
+
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        if (numbers[i] < 0){
+            newArr[i] = "Dojo";
+        } else {
+            newArr[i] = numbers[i];
+        }
+    }
+
+    foreach (object obj in newArr)
+    {
+        Console.WriteLine(obj);
+    }
+    return newArr;
 }
 
+NumToString(numArr);
