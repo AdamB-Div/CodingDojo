@@ -225,7 +225,7 @@ int[] numArr = {2, 10, 3, 85, -2, -4};
 //     temp.Add(0);
 
 //     numbers = temp.ToArray();
-    
+
 //     foreach (int num in numbers)
 //     {
 //         Console.WriteLine(num);
@@ -236,42 +236,23 @@ int[] numArr = {2, 10, 3, 85, -2, -4};
 
 
 // 13
-// static object[] NumToString(int[] numbers)
-// {
-//     object[] objArray = numbers.Cast<object>().ToArray();
+// static object[] NumToString(int[] numbers){
+//     object[] newArr = new object[numbers.Length];
 
-//     string dojo = "Dojo";
-//     foreach (object obj in objArray)
+//     for (int i = 0; i < numbers.Length; i++)
 //     {
-//         if ((int)obj < 0) {
-//             objArray[(int)obj] = (string)dojo;
+//         if (numbers[i] < 0){
+//             newArr[i] = "Dojo";
+//         } else {
+//             newArr[i] = numbers[i];
 //         }
 //     }
 
-//     foreach (object obj in objArray)
+//     foreach (object obj in newArr)
 //     {
 //         Console.WriteLine(obj);
 //     }
-
-//     return objArray;
+//     return newArr;
 // }
-static object[] NumToString(int[] numbers){
-    object[] newArr = new object[numbers.Length];
 
-    for (int i = 0; i < numbers.Length; i++)
-    {
-        if (numbers[i] < 0){
-            newArr[i] = "Dojo";
-        } else {
-            newArr[i] = numbers[i];
-        }
-    }
-
-    foreach (object obj in newArr)
-    {
-        Console.WriteLine(obj);
-    }
-    return newArr;
-}
-
-NumToString(numArr);
+// NumToString(numArr);
