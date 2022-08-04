@@ -15,13 +15,13 @@
 
         <div class="border border-3 border-dark rounded p-4">
 
-            <form action="pushinfo">
+            <form action="/results" method="POST">
                 <div class="row g-3 mb-4 align-items-center">
                     <div class="col-6">
                         <label class="col-form-label fw-bold">Your Name</label>
                     </div>
                     <div class="col-6">
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="Name" class="form-control">
                     </div>
                 </div>
 
@@ -30,12 +30,12 @@
                         <label class="col-form-label fw-bold">Dojo Location</label>
                     </div>
                     <div class="col-6">
-                        <select class="form-select" name="location">
-                            <option selected>Chose Location</option>
-                            <option value="1">San Jose</option>
-                            <option value="2">Detroit</option>
-                            <option value="3">Philadelphia</option>
-                            <option value="4">New York</option>
+                        <select class="form-select" name="Location">
+                            <option selected>Choose Location</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="Detroit">Detroit</option>
+                            <option value="Philadelphia">Philadelphia</option>
+                            <option value="New York">New York</option>
                         </select>
                     </div>
                 </div>
@@ -45,12 +45,12 @@
                         <label class="col-form-label fw-bold">Favorite Language</label>
                     </div>
                     <div class="col-6">
-                        <select class="form-select" name="language">
-                            <option selected>Chose Language</option>
-                            <option value="1">C#</option>
-                            <option value="2">Python</option>
-                            <option value="3">Java</option>
-                            <option value="4">HTML/CSS</option>
+                        <select class="form-select" name="Language">
+                            <option selected>Choose Language</option>
+                            <option value="C#">C#</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
                         </select>
                     </div>
                 </div>
@@ -60,14 +60,15 @@
                         <label class="col-form-label fw-bold">Comment(optional):</label><br>
                     </div>
                     <div>
-                        <textarea class="form-control" style="height: 100px" name="comments"></textarea>
+                        <textarea class="form-control" style="height: 100px" name="Comment"></textarea>
                     </div>
                 </div>
 
                 <div class="row justify-content-end">
-                    <a href="" class="col-2 me-2 btn btn-primary">Submit</a>
+                    @* Submit Button *@
+                    <button type="submit" class="col-2 me-2 btn btn-primary">Submit</button>
                 </div>
-
+                
             </form>
         </div>
 
