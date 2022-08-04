@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DojoSurveyWithValidation.Models;
+using DojoSurveyWithValidations.Models;
 
-namespace DojoSurveyWithValidation.Controllers;
+namespace DojoSurveyWithValidations.Controllers;
 
 public class HomeController : Controller
 {

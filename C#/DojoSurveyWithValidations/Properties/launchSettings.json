@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:45033",
+      "applicationUrl": "http://localhost:10768",
       "sslPort": 0
     }
   },
   "profiles": {
-    "DojoSurveyWithValidation": {
+    "DojoSurveyWithValidations": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5126",
+      "applicationUrl": "http://localhost:5227",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

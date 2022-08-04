@@ -1,4 +1,4 @@
-namespace DojoSurveyWithValidation.Models;
+namespace DojoSurveyWithValidations.Models;
 
 public class ErrorViewModel
 {
