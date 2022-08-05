@@ -1,0 +1,67 @@
+﻿@model Survey
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="">
+    <div class="border border-3 border-dark rounded p-4">
+            <form asp-action="DisplayResults" asp-controller="Survey" method="POST">
+                <div class="row g-3 mb-4 align-items-center">
+                    <div class="col-6">
+                        <label asp-for="Name" class="col-form-label fw-bold"></label>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Name" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <div class="col-6">
+                        <label asp-for="Location" class="col-form-label fw-bold"></label>
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" asp-for="Location">
+                            <option disabled selected>Choose Location</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="Detroit">Detroit</option>
+                            <option value="Philadelphia">Philadelphia</option>
+                            <option value="New York">New York</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <div class="col-6">
+                        <label asp-for="Language" class="col-form-label fw-bold"></label>
+                        <span asp-validation-for="Language" class="text-danger"></span>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" asp-for="Language">
+                            <option disabled selected>Choose Language</option>
+                            <option value="C#">C#</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <div class="col-6">
+                        <label asp-for="Comment" class="col-form-label fw-bold"></label><br>
+                        <span asp-validation-for="Comment" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <textarea class="form-control" style="height: 100px" asp-for="Comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end">
+                    <button type="submit" class="col-2 me-2 btn btn-primary">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+</div>

@@ -1,0 +1,40 @@
+@model Survey
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="">
+    <div class="border border-3 border-dark rounded p-5">
+
+            <h1>Submitted Info</h1>
+
+            <div class="p-5">
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <h4 class="col-6">Name:</h4>
+                    <h5 class="col-6">@Model.Name</h5>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <h4 class="col-6">Dojo Location:</h4>
+                    <h5 class="col-6">@Model.Location</h5>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <h4 class="col-6">Language:</h4>
+                    <h5 class="col-6">@Model.Language</h5>
+                </div>
+
+                <div class="row g-3 mb-4 align-items-center">
+                    <h4 class="col-6">Comments:</h4>
+                    <h5 class="col-6">@Model.Comment</h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-end">
+                <a href="/" class="col-2 me-2 btn btn-primary">Go Back</a>
+            </div>
+
+        </div>
+</div>
