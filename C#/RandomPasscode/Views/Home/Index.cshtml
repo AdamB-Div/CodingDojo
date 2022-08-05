@@ -2,7 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row text-center mb-3" style="margin-top: 30%;">
+    <h5>Random Passcode (Passcode #@Context.Session.GetInt32("count"))</h5>
+</div>
+
+<div class=" row col-auto justify-content-center">
+    <h2 class="col-auto border border-dark border-3 py-2">@Context.Session.GetString("password")</h2>
+</div>
+
+<div class="row justify-content-center mt-3">
+    <a asp-action="Index" class="col-auto btn btn-primary shadow mb-5 rounded">Generate</a>
 </div>
