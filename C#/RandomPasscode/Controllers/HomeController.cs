@@ -17,14 +17,9 @@ public class HomeController : Controller
 
         if (count == null)
         {
-            HttpContext.Session.SetInt32("count", 0);
+            count = 0;
         }
-        else
-        {
-            int counter = (int)HttpContext.Session.GetInt32("count");
-            HttpContext.Session.SetInt32("count", counter + 1);
-        }
-
+            HttpContext.Session.SetInt32("count", (int)count + 1);
 
         return View("Index");
     }
