@@ -6,21 +6,38 @@ namespace LoginAndRegistration.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private int? uid
     {
-        _logger = logger;
+        get
+        {
+            return HttpContext.Session.GetInt32("UserId");
+        }
     }
 
+    private bool loggedIn
+    {
+        get
+        {
+            return uid != null;
+        }
+    }
+
+    private LoginAndRegistrationContext _context;
+
+    public HomeController(LoginAndRegistrationContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet("")]
     public IActionResult Index()
     {
-        return View();
-    }
+        if (loggedIn)
+        {
+            return View("Index");
+        }
 
-    public IActionResult Privacy()
-    {
-        return View();
+        return RedirectToAction("Login", "User");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

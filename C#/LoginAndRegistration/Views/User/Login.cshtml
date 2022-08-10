@@ -1,0 +1,36 @@
+@model LoginUser
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div>
+    <h1 class="display-4">Login to this Cool Site!</h1>
+</div>
+
+<div class="row justify-content-end">
+    <a asp-controller="User" asp-action="Register" class="btn btn-success col-2">Register</a>
+</div>
+
+<form asp-controller="User" asp-action="LoginUser" method="POST">
+    <div class="row d-flex mb-4">
+        <div class="col-5">
+            <label asp-for="LoginEmail"></label>
+            <span asp-validation-for="LoginEmail"></span>
+            <input asp-for="LoginEmail" class="form-control w-75">
+        </div>
+    </div>
+
+    <div class="row d-flex mb-4">
+        <div class="col-5">
+            <label asp-for="LoginPassword"></label>
+            <span asp-validation-for="LoginPassword"></span>
+            <input asp-for="LoginPassword" class="form-control w-75">
+        </div>
+    </div>
+
+    <div class="row d-flex mb-4">
+        <div>
+            <input type="submit" class="col-2 btn btn-primary" value="Login">
+        </div>
+    </div>
+</form>
