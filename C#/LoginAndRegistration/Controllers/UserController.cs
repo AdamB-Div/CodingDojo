@@ -100,4 +100,12 @@ public class UserController : Controller
 
         return RedirectToAction("Index", "Home");
     }
+
+
+    [HttpPost("logout")]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index", "Home");
+    }
 }
