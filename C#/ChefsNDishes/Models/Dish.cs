@@ -19,7 +19,7 @@ public class Dish
     public int Calories { get; set; }
 
     [Required(ErrorMessage = "is required")]
-    [Range(0, 5, ErrorMessage = " must be 1-5")]
+    [Range(1, 5, ErrorMessage = " must be 1-5")]
     public int Tastiness { get; set; }
 
     [Required(ErrorMessage = "is required")]
@@ -28,6 +28,9 @@ public class Dish
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
-
+    
+    [Required]
+    [Display(Name = "Chef")]
     public int ChefId { get; set; }
+    public Chef? Creator { get; set; }
 }

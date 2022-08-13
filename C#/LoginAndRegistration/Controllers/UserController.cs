@@ -39,12 +39,9 @@ public class UserController : Controller
     [HttpPost("register/user")]
     public IActionResult RegisterUser(User newUser)
     {
-        if (ModelState.IsValid)
+        if (_context.Users.Any(user => user.Email == newUser.Email))
         {
-            if (_context.Users.Any(user => user.Email == newUser.Email))
-            {
-                ModelState.AddModelError("Email", "is already registered");
-            }
+            ModelState.AddModelError("Email", "is already registered");
         }
 
         if (ModelState.IsValid == false)

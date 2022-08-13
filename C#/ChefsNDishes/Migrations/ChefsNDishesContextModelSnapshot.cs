@@ -28,7 +28,8 @@ namespace ChefsNDishes.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<DateTime?>("DateOfBirth")
+                        .IsRequired()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("FirstName")
@@ -78,7 +79,25 @@ namespace ChefsNDishes.Migrations
 
                     b.HasKey("DishId");
 
+                    b.HasIndex("ChefId");
+
                     b.ToTable("Dishes");
+                });
+
+            modelBuilder.Entity("ChefsNDishes.Models.Dish", b =>
+                {
+                    b.HasOne("ChefsNDishes.Models.Chef", "Creator")
+                        .WithMany("CreatedDishes")
+                        .HasForeignKey("ChefId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Creator");
+                });
+
+            modelBuilder.Entity("ChefsNDishes.Models.Chef", b =>
+                {
+                    b.Navigation("CreatedDishes");
                 });
 #pragma warning restore 612, 618
         }

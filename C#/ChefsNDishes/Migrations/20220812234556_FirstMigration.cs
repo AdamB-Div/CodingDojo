@@ -52,17 +52,28 @@ namespace ChefsNDishes.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Dishes", x => x.DishId);
+                    table.ForeignKey(
+                        name: "FK_Dishes_Chefs_ChefId",
+                        column: x => x.ChefId,
+                        principalTable: "Chefs",
+                        principalColumn: "ChefId",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Dishes_ChefId",
+                table: "Dishes",
+                column: "ChefId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Chefs");
+                name: "Dishes");
 
             migrationBuilder.DropTable(
-                name: "Dishes");
+                name: "Chefs");
         }
     }
 }

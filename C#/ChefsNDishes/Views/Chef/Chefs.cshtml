@@ -1,0 +1,34 @@
+@model List<Chef>
+@{
+    ViewData["Title"] = "Chefs Page";
+}
+
+<div class="row d-flex justify-content-between align-items-center">
+    <h1 class="display-4 col-10">Check out our roster of Chefs!</h1>
+
+    <a class="btn btn-primary col-2" style="max-height: 40px;" asp-controller="Chef" asp-action="AddChef">Add A Chef</a>
+</div>
+
+<hr class="col-8">
+
+<div class="row col-10">
+    <table class="table table-striped border border-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th># of Dishes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Chef chef in Model)
+            {
+                <tr>
+                    <td>@chef.FullName()</td>
+                    <td>@chef.Age()</td>
+                    <td>@chef.CreatedDishes.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
