@@ -6,22 +6,13 @@ namespace ProductsAndCategories.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private ProductsAndCategoriesContext _context;
+    
+    public HomeController(ProductsAndCategoriesContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
