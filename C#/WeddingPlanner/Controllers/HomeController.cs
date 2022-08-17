@@ -6,22 +6,14 @@ namespace WeddingPlanner.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private WeddingPlannerContext _context;
+    
+    public HomeController(WeddingPlannerContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
