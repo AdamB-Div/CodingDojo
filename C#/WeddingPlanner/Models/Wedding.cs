@@ -33,5 +33,9 @@ public class Wedding
 
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
+    public int UserId { get; set; }
+
+    public User? Creator { get; set; }
+
     public List<RSVP> Guests { get; set; } = new List<RSVP>();
 }

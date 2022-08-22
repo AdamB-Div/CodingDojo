@@ -15,9 +15,9 @@ public class CustomValidations
 
             DateTime date = (DateTime)value;
 
-            if (date >= DateTime.Now)
+            if (date <= DateTime.Now)
             {
-                return new ValidationResult("must be in the past");
+                return new ValidationResult("must be in the future");
             }
             return ValidationResult.Success;
         }

@@ -11,8 +11,8 @@ using WeddingPlanner.Models;
 namespace WeddingPlanner.Migrations
 {
     [DbContext(typeof(WeddingPlannerContext))]
-    [Migration("20220817212415_UsersWeddingsAndRSVPs")]
-    partial class UsersWeddingsAndRSVPs
+    [Migration("20220822192358_Migration1")]
+    partial class Migration1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,6 +87,9 @@ namespace WeddingPlanner.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("WedderOne")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -104,6 +107,8 @@ namespace WeddingPlanner.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("WeddingId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Weddings");
                 });
@@ -125,6 +130,17 @@ namespace WeddingPlanner.Migrations
                     b.Navigation("User");
 
                     b.Navigation("Wedding");
+                });
+
+            modelBuilder.Entity("WeddingPlanner.Models.Wedding", b =>
+                {
+                    b.HasOne("WeddingPlanner.Models.User", "Creator")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Creator");
                 });
 
             modelBuilder.Entity("WeddingPlanner.Models.User", b =>
