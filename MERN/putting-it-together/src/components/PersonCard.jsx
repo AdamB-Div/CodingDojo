@@ -14,13 +14,14 @@ class PersonCard extends React.Component {
     };
 
     render = () => {
-        const { firstName, lastName, age, hairColor } = this.props;
+        const { firstName, lastName, hairColor } = this.props;
+        const { age } = this.state;
         return (
             <>
                 <h3>
                     {lastName}, {firstName}
                 </h3>
-                <p>Age: {this.state.age}</p>
+                <p>Age: {age}</p>
                 <p>Hair Color: {hairColor}</p>
                 <button onClick={this.handleClick}>
                     Birthday Button for {firstName} {lastName}

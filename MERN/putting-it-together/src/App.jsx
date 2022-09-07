@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import PersonCard from "./components/PersonCard";
 
 function App() {
@@ -27,7 +25,7 @@ function App() {
                 firstName="Maria"
                 lastName="Smith"
                 age={62}
-                hairColor="Brown"
+                hairColor="Blonde"
             />
         </div>
     );
