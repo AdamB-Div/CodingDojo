@@ -9,7 +9,7 @@ const Form = props => {
     const createBox = e => {
         e.preventDefault();
         const newBox = {
-            color: color,
+            color,
         };
         props.addToState(newBox);
         setColor("");
