@@ -1,10 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import Input from "./components/Input";
 
 function App() {
     return (
-        <div>
-            <h1 className="text-red-500">Hello!!</h1>
+        <div className="container m-auto p-2">
+            <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/:input/:txt/:bg" element={<Input />} />
+            </Routes>
         </div>
     );
 }
