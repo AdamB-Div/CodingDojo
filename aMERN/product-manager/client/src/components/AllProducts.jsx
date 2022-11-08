@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 
-const AllProducts = () => {
+const AllProducts = props => {
     // State Variable
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     // useEffect
     useEffect(() => {
@@ -23,7 +25,13 @@ const AllProducts = () => {
             <p className="text-3xl font-bold my-3">All Products:</p>
             {products.map(p => {
                 return (
-                    <p key={p._id} className="text-xl underline">
+                    <p
+                        key={p._id}
+                        className="text-xl underline cursor-pointer"
+                        onClick={() => {
+                            navigate(`/${p._id}`);
+                        }}
+                    >
                         {p.title}
                     </p>
                 );
