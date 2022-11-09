@@ -21,6 +21,14 @@ const Product = props => {
             .catch(err => console.log(err));
     }, [id]);
 
+    const deleteProduct = () => {
+        axios
+            .delete(`http://localhost:8000/api/products/${id}`)
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        navigate(`/`);
+    };
+
     return (
         <div className="container m-auto p-4 flex flex-col items-center justify-center gap-4">
             <p className="text-3xl font-bold">{product.title}</p>
@@ -35,7 +43,10 @@ const Product = props => {
                 >
                     Update
                 </button>
-                <button className="bg-red-400 rounded py-1 px-5 mt-4">
+                <button
+                    className="bg-red-400 rounded py-1 px-5 mt-4"
+                    onClick={deleteProduct}
+                >
                     Delete
                 </button>
             </div>
